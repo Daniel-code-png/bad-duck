@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Duck - Cali</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">BAD DUCK</a>
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>SABORES CALLEJEROS, CALIDAD ESPECIAL.</h1>
+            <p>¡Ven y prueba las mejores hamburguesas de Cali en BAD DUCK!</p>
+            <a href="menu.html" class="btn-primary">Explora el Menú</a>
+        </div>
+    </header>
+
+    <main class="content-sections">
+        <section class="highlight-message" style="background-image: url('fondo3.jpeg');">
+            <div class="container">
+                <div class="highlight-card">
+                    <h2>¡Tu Próxima Adicción Culinaria Te Espera!</h2>
+                    <p>En BAD DUCK BURGERS, fusionamos el arte urbano con el sabor inigualable. Cada hamburguesa es una obra maestra, creada con la carne más jugosa, los ingredientes más frescos y un toque de nuestra esencia callejera. Si buscas una explosión de sabor en Cali, este es tu lugar.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="opening-hours" style="background-image: url('fondo2.jpeg');">
+            <div class="container">
+                <h2>Nuestros Horarios</h2>
+                <div class="hours-grid">
+                    <p><span>Jueves a Domingo:</span> 6:00 PM - 12:00 PM</p>
+                    <p class="special-note">¡Te esperamos!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="container">
+                <h2>Nuestra Galería de Hamburguesas</h2>
+                <div class="gallery-slider-container">
+                    <div class="gallery-slider">
+                        <div class="slide">
+                            <img src="hamburguesa-sencilla.jpg" alt="Hamburguesa Bad Duck 1">
+                            <div class="caption">La Clásica Bad Duck</div>
+                        </div>
+
+                        <div class="slide">
+                            <img src="hamburguesa-sencilla2.jpg" alt="Hamburguesa Bad Duck 2">
+                            <div class="caption">La Doble Carne Urbana</div>
+                        </div>
+
+                        <div class="slide">
+                            <img src="hamburguesa-sencilla3.jpg" alt="Hamburguesa Bad Duck 3">
+                            <div class="caption">La Bad Duck Extrema</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>BAD DUCK BURGERS</h3>
+                    <p>El sabor urbano de Cali.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Ubicación</h3>
+                    <p>Dirección: Calle 1c #71-52, Cali</p>
+                    <p>Teléfono: 324 258 2747</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Bad Duck. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/573242582747?text=Hola,%20me%20gustaría%20ordenar%20una%20hamburguesa%20de%20Bad%20Duck!" class="floating-button whatsapp-button" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.instagram.com/bad_duck2025?igsh=c3gxcTBpNXB2OWNj" class="floating-button instagram-button" target="_blank" aria-label="Seguir en Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.tiktok.com/@bad.duck57?_t=ZS-8ySqNd95G6L&_r=1" class="floating-button tiktok-button" target="_blank" aria-label="Seguir en TikTok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+
+            let slideIndex = 0;
+            const slides = document.querySelectorAll('.gallery-slider .slide');
+            const totalSlides = slides.length;
+
+            function showSlides() {
+                slides.forEach((slide, index) => {
+                    slide.style.display = 'none';
+                });
+
+                slideIndex++;
+                if (slideIndex > totalSlides) {
+                    slideIndex = 1;
+                }
+                slides[slideIndex - 1].style.display = 'block';
+                setTimeout(showSlides, 4000);
+            }
+
+            if (totalSlides > 0) {
+                showSlides();
+            }
+        });
+    </script>
+</body>
+</html>
