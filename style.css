@@ -720,6 +720,15 @@ h1, h2, h3 {
     letter-spacing: 1px;
     margin-top: 20px; 
 }
+.section-slogan {
+    font-size: 1.5em; /* Tamaño para que destaque */
+    font-weight: 700; /* Negrita */
+    color: var(--light-text-color); /* Color que contraste con el fondo oscuro */
+    text-align: center;
+    margin-top: -25px; /* Lo subimos un poco para acercarlo al título h2 */
+    margin-bottom: 40px; /* Espacio debajo del eslogan */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para leerse mejor en el fondo */
+}
 
 /* Ocultamos el div de .prices para los items de promoción, ya que solo tienen un precio */
 .menu-item.promo-item .prices {
@@ -761,6 +770,11 @@ h1, h2, h3 {
     .navbar {
         flex-wrap: wrap;
         padding: 15px 20px;
+    }
+    .section-slogan {
+        font-size: 1.2em; /* Más pequeño en tablets */
+        margin-top: -15px;
+        margin-bottom: 30px;
     }
     .logo a {
         font-size: 1.8em;
@@ -921,6 +935,11 @@ h1, h2, h3 {
         gap: 10px; /* Puedes reducir aún más el espacio si es muy apretado */
         /* Puede que necesites ajustar el font-size de los nav-links aquí si el espacio es muy limitado */
         font-size: 0.8em; /* Ejemplo de reducción de tamaño de fuente */
+    }
+    .section-slogan {
+        font-size: 1em; /* Aún más pequeño en teléfonos */
+        margin-top: -10px;
+        margin-bottom: 25px;
     }
     .logo a {
         font-size: 1.5em;
