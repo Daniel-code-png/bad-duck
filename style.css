@@ -577,7 +577,7 @@ h1, h2, h3 {
 .full-width-section {
     padding: 60px 0; /* Padding vertical para esta sección de ancho completo */
     position: relative;
-    background-image: url('./img/fondo-galeria-graffiti.jpg'); /* Fondo de graffiti */
+    background-image: url('fondo2.jpeg'); /* Fondo de graffiti */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
