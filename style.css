@@ -788,7 +788,7 @@ h1, h2, h3 {
         font-size: 1em;
     }
     .hamburger-menu {
-        display: flex; 
+        display: none; 
     }
     .hamburger-menu.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
@@ -914,6 +914,13 @@ h1, h2, h3 {
 @media (max-width: 480px) { 
     .navbar {
         padding: 15px 15px;
+    }
+    .nav-links {
+        display: flex; /* CAMBIO CLAVE: Asegura que siga siendo visible */
+        flex-direction: row; /* Mantiene en fila */
+        gap: 10px; /* Puedes reducir aún más el espacio si es muy apretado */
+        /* Puede que necesites ajustar el font-size de los nav-links aquí si el espacio es muy limitado */
+        font-size: 0.8em; /* Ejemplo de reducción de tamaño de fuente */
     }
     .logo a {
         font-size: 1.5em;
