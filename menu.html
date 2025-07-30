@@ -198,68 +198,6 @@
         <i class="fab fa-tiktok"></i>
     </a>
 
-    <style>
-        .lightbox-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9); /* Fondo semi-transparente oscuro */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000; /* Asegura que esté por encima de todo lo demás */
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-
-        .lightbox-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .lightbox-content {
-            max-width: 90%;
-            max-height: 90%;
-            overflow: hidden; /* Evita que la imagen se salga si es demasiado grande */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .lightbox-content img {
-            max-width: 100%;
-            max-height: 100%;
-            display: block; /* Elimina espacio extra debajo de la imagen */
-            border-radius: 8px; /* Bordes redondeados para la imagen grande */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Sombra para destacarla */
-        }
-
-        /* Botón de cerrar para el lightbox */
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: #fff;
-            font-size: 2.5em;
-            cursor: pointer;
-            z-index: 1001; /* Asegura que esté por encima de la imagen */
-            font-family: Arial, sans-serif; /* Fuente estándar para la X */
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-        }
-
-        .lightbox-close:hover {
-            color: var(--accent-color); /* Cambia de color al pasar el mouse */
-        }
-
-        /* Opcional: Cursor de lupa para las imágenes que se pueden ampliar */
-        .zoomable-image {
-            cursor: zoom-in;
-        }
-    </style>
-
     <script>
     document.addEventListener('DOMContentLoaded', () => {
         const hamburger = document.querySelector('.hamburger-menu');
