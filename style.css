@@ -939,7 +939,7 @@ h1, h2, h3 {
     /* CAMBIO CLAVE: Vuelve a 1 columna para 480px o menos */
     .menu-grid {
         grid-template-columns: 1fr; 
-        gap: 25px; 
+        gap: 20px; 
     }
     /* Ajustes adicionales para cada producto del menú en 480px o menos */
     .menu-item img {
