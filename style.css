@@ -772,7 +772,7 @@ h1, h2, h3 {
         padding: 15px 20px;
     }
     .section-slogan {
-        font-size: 1.2em; /* Más pequeño en tablets */
+        font-size: 1.7em; /* Más pequeño en tablets */
         margin-top: -15px;
         margin-bottom: 30px;
     }
@@ -937,7 +937,7 @@ h1, h2, h3 {
         font-size: 0.8em; /* Ejemplo de reducción de tamaño de fuente */
     }
     .section-slogan {
-        font-size: 1em; /* Aún más pequeño en teléfonos */
+        font-size: 1.3em; /* Aún más pequeño en teléfonos */
         margin-top: -10px;
         margin-bottom: 25px;
     }
