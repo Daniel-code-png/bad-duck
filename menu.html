@@ -99,7 +99,7 @@
                         <span class="price">$8.000</span> 
                     </div>
                     <div class="menu-item promo-item">
-                        <img src="soda2 amarilla.jpeg" alt="Soda Frutos Amarillos"> <h3>Soda Frutos Amarillos</h3>
+                        <img src="soda amarilla.jpeg" alt="Soda Frutos Amarillos" class="zoomable-image" data-fullsize="./img/menu/soda-frutos-amarillos-full.jpg"> <h3>Soda Frutos Amarillos</h3>
                         <p>Deliciosa y refrescante soda italiana casera con notas ácidas y acarameladas a tu paladar.</p>
                         <span class="price">$8.000</span> 
                     </div>
@@ -206,6 +206,70 @@
                 });
             }
         });
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        }
+
+        // --- JavaScript para el Lightbox ---
+        const zoomableImages = document.querySelectorAll('.zoomable-image');
+        let lightboxOverlay = document.createElement('div');
+        lightboxOverlay.classList.add('lightbox-overlay');
+
+        let lightboxContent = document.createElement('div');
+        lightboxContent.classList.add('lightbox-content');
+        lightboxOverlay.appendChild(lightboxContent);
+
+        let closeButton = document.createElement('span');
+        closeButton.classList.add('lightbox-close');
+        closeButton.innerHTML = '&times;'; // Símbolo 'x'
+        lightboxOverlay.appendChild(closeButton);
+
+        document.body.appendChild(lightboxOverlay);
+
+        zoomableImages.forEach(image => {
+            image.addEventListener('click', function() {
+                const fullSizeSrc = this.getAttribute('data-fullsize');
+                if (fullSizeSrc) {
+                    const img = document.createElement('img');
+                    img.src = fullSizeSrc;
+                    img.alt = this.alt;
+
+                    // Limpiar contenido previo y añadir nueva imagen
+                    lightboxContent.innerHTML = ''; 
+                    lightboxContent.appendChild(img);
+                    lightboxOverlay.classList.add('active'); // Mostrar el lightbox
+                }
+            });
+        });
+
+        // Cerrar el lightbox al hacer clic en el botón de cerrar o fuera de la imagen
+        closeButton.addEventListener('click', () => {
+            lightboxOverlay.classList.remove('active');
+        });
+
+        lightboxOverlay.addEventListener('click', (event) => {
+            if (event.target === lightboxOverlay) { // Solo si se hace clic en el fondo oscuro, no en la imagen
+                lightboxOverlay.classList.remove('active');
+            }
+        });
+
+        // Opcional: Cerrar con la tecla ESC
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && lightboxOverlay.classList.contains('active')) {
+                lightboxOverlay.classList.remove('active');
+            }
+        });
+    });
     </script>
 </body>
 </html>
