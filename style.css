@@ -1045,3 +1045,18 @@ h1, h2, h3 {
 .zoomable-image {
     cursor: zoom-in;
 }
+/* Example CSS for your style.css file */
+.video-container {
+    width: 100%;
+    max-width: 800px; /* Or whatever max width suits your design */
+    margin: 0 auto;
+    background-color: #000; /* Background for when video is loading or if it fails */
+    border-radius: 8px; /* Optional: match your image styling */
+    overflow: hidden; /* Ensures video corners are rounded if border-radius is applied */
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes extra space below the video */
+}
